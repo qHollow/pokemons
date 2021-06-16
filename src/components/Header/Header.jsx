@@ -1,33 +1,29 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.header`
-  padding: 0 10px;
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
   width: 100%;
   height: 50px;
-  background-color: #385caa;
+  background-color: #ffcc01;
 `
 
-const Login = styled.button`
-  display: block;
-  width: 100px;
-  height: 40px;
-  background-color: #ffcc01;
-  color: #385caa;
-  font-size: 18px;
-  font-weight: bold;
-  border: 2px solid yellow;
-  border-radius: 10px;
+const Login = styled(Link)`
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #0071f0;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: .3s;
+  outline: none;
+  &:focus,
   &:hover {
-    cursor: pointer;
-    box-shadow: 0 0 3px 4px #04bcf4;
-  }
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 3px 4px #04bcf4;
+    background-color: #0468d8;
+    box-shadow: 0 0 0 2px #0468d8;
   }
 `
 
@@ -41,10 +37,12 @@ const Row = styled.div`
 const Header = () => {
   return (
     <Wrapper>
-      <img src="../img/logo.png" alt="Logo" width="40" height="40" />
+      <Link to="/">
+        <img src="../img/logo.png" alt="Logo" width="40" height="40" />
+      </Link>
       <Row>
-        <Login>Login</Login>
-        <Login>Register</Login>
+        <Login to="/login">Sign in</Login>
+        <Login to="/register">Sign up</Login>
       </Row>
     </Wrapper>
   )

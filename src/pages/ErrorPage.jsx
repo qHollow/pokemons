@@ -1,10 +1,18 @@
+import styled from "styled-components";
 
+const Wrapper = styled.div`
+  display: flex;
+  width: 100vw;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+`
 
 const ErrorPage = () => {
   return (
-    <h1>
-      Sorry, but something was wrong...
-    </h1>
+    <Wrapper>
+      <h1>Что-то пошло не так :(</h1>
+    </Wrapper>
   );
 };
 

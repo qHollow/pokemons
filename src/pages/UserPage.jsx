@@ -1,9 +1,18 @@
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  /* width: 100vw; */
+  padding: 50px;
+  display: flex;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+`
+
 
 const UserPage = () => {
   return (
-    <h1>
-      This is the user page. Content will come later. 
-    </h1>
+    <Wrapper>
+    </Wrapper>
   );
 };
 
